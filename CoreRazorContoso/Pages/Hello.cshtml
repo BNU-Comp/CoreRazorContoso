@@ -1,0 +1,38 @@
+﻿@page
+@model CoreRazorContoso.Pages.HelloModel
+@{
+    ViewData["Title"] = "Hello";
+}
+<section class="jumbotron">
+    <h1 class="display-4">ASP.NET Core Razor Pages Website</h1>
+    <h2>by Dr Derek Peacock</h2>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>
+        This example website has been created as part of CO550 Web Applications
+        module
+    </p>
+</section>
+<main>
+    <h2>Hello Example: Timed @DateTime.Now</h2>
+    <form method="post">
+        <div class="form-group row">
+            <div class="col-lg-1">
+                <label class="col-form-label">Name:</label>
+            </div>
+            <div class="col-lg-4">
+                <input class="form-control" asp-for="name" placeholder="Your Name" />
+            </div>
+            <div class="col-lg-2">
+                <input type="submit" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+    <p>
+        @if (this.Model.name != null)
+        {
+            <span>Hello </span>@this.Model.name
+            <span>, how are you ?</span>
+        }
+    </p>
+</main>
+

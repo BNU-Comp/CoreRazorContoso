@@ -10,7 +10,7 @@ namespace CoreRazorContoso.Data
     {
         public static void Intialise(UniversityContext context)
         {
-            context.Database.EnsureCreated();
+            //context.Database.EnsureCreated();
 
             // Look for any students.
             if (context.Student.Any())
